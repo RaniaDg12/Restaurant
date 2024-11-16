@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const restaurantRoute = require('./routes/restaurantRoute');
 
 const app = express();
 app.use(cors());
@@ -13,6 +14,8 @@ mongoose.connect('mongodb://localhost:27017/restaurantDB', { useNewUrlParser: tr
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.error('MongoDB Error:', err));
 
+// Routes
+app.use('/restaurants', restaurantRoute);
 
 // Lancer le serveur
 app.listen(5000, () => console.log('Server running on http://localhost:5000'));
