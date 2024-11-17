@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+/* Responsive grid for restaurants */
+.restaurant-grid {
+  display: flex; /* Use flexbox for the row layout */
+  gap: 20px; /* Add space between cards */
+  justify-content: center; /* Center align the cards in the container */
+  padding: 20px;
+  margin: 0 auto; /* Center the grid horizontally */
+}
+
+
+
+/* Responsive design with media queries */
+@media (max-width: 768px) {
+  .restaurant-grid {
+    flex-direction: column; /* Stack items vertically for small screens */
+    align-items: center;
+  }
+}

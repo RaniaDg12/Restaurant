@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Restaurant from './components/restaurant';
+import Restaurant from './components/restaurants/restaurant';
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -14,8 +14,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Restaurants</h1>
-      <div>
+      <header className="app-header">
+        <h1>Restaurants</h1>
+      </header>
+      <main className="restaurant-grid">
         {restaurants.length > 0 ? (
           restaurants.map(restaurant => (
             <Restaurant key={restaurant._id} restaurant={restaurant} />
@@ -23,7 +25,7 @@ function App() {
         ) : (
           <p>No restaurants available.</p>
         )}
-      </div>
+      </main>
     </div>
   );
 }
