@@ -1,52 +1,96 @@
-/* menu.css */
+/* Menu page styling */
 .menu-page {
   text-align: center;
   padding: 20px;
 }
 
+/* Grid for the menu cards */
 .menu-grid {
   display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  align-items: center; /* Align the items vertically */
+  flex-wrap: wrap;
   gap: 20px;
-  overflow-x: auto; /* Allow horizontal scrolling if the cards overflow */
-  padding: 20px 0; /* Optional: space around the grid */
+  justify-content: center; /* Center the cards */
 }
 
+/* Menu card container */
 .menu-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 250px; /* Fixed width for consistent card sizing */
-  text-align: left;
-  margin: 0 10px; /* Optional: margin around the cards */
+  overflow: hidden;
+  width: 250px; /* Adjust the width as needed */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* Add some padding */
 }
 
-/* Optional: Add hover effect for better interactivity */
-.menu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+/* Image styling */
+.menu-item-image {
+  width: 90%; /* Adjust the width as needed */
+  height: auto; /* Keep the aspect ratio */
+  border-radius: 10px; /* Add rounded corners */
+  object-fit: cover; /* Ensures the image scales properly */
 }
 
-.menu-card h2 {
-  font-size: 1.5rem;
+/* Content within the menu card */
+.menu-card-content {
+  padding: 10px 15px;
+}
+
+/* Item name styling */
+.menu-item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+/* Item description styling */
+.menu-item-description {
+  font-size: 0.9rem;
+  color: #666;
   margin-bottom: 10px;
 }
 
-.menu-card p {
-  margin: 5px 0;
+/* Footer with price and button */
+.menu-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .menu-card {
-    width: 200px; /* Adjust card width for smaller screens */
-  }
+/* Price styling */
+.menu-item-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-left: 10px;
 }
 
-@media (max-width: 480px) {
-  .menu-card {
-    width: 100%; /* One card per row on small screens */
-  }
+/* Add-to-order button */
+.add-to-order-button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.add-to-order-button:hover {
+  background-color: #e67e22;
+}
+
+.add-to-order-button:active {
+  background-color: #d35400;
+}
+
+

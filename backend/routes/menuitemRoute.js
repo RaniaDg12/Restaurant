@@ -6,7 +6,7 @@ const router = express.Router();
 // CREATE a new menu item for a specific restaurant
 router.post('/restaurant/:restaurantId', async (req, res) => {
   try {
-    const { name, description, price, category } = req.body;
+    const { name, description, price, image, category } = req.body;
     const restaurant = await Restaurant.findById(req.params.restaurantId);
 
     if (!restaurant) {
@@ -18,6 +18,7 @@ router.post('/restaurant/:restaurantId', async (req, res) => {
       name,
       description,
       price,
+      image,
       category,
     });
 
@@ -82,7 +83,7 @@ router.put('/restaurant/:restaurantId/:menuItemId', async (req, res) => {
 
     const updatedMenuItem = await MenuItem.findByIdAndUpdate(
       req.params.menuItemId,
-      { name, description, price, category },
+      { name, description, price, image, category },
       { new: true }
     );
 
