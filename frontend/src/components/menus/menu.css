@@ -1,0 +1,52 @@
+/* menu.css */
+.menu-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center; /* Align the items vertically */
+  gap: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling if the cards overflow */
+  padding: 20px 0; /* Optional: space around the grid */
+}
+
+.menu-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px; /* Fixed width for consistent card sizing */
+  text-align: left;
+  margin: 0 10px; /* Optional: margin around the cards */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.menu-card p {
+  margin: 5px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .menu-card {
+    width: 200px; /* Adjust card width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-card {
+    width: 100%; /* One card per row on small screens */
+  }
+}

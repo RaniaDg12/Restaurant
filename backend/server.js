@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const restaurantRoute = require('./routes/restaurantRoute');
+const menuitemRoute = require('./routes/menuitemRoute');
+
 
 const app = express();
 app.use(cors());
@@ -16,6 +18,7 @@ mongoose.connect('mongodb://localhost:27017/restaurantDB', { useNewUrlParser: tr
 
 // Routes
 app.use('/restaurants', restaurantRoute);
+app.use('/menu', menuitemRoute);
 
 // Lancer le serveur
 app.listen(5000, () => console.log('Server running on http://localhost:5000'));

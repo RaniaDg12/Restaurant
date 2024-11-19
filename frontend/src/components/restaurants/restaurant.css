@@ -1,46 +1,64 @@
+/* Container for the restaurant cards */
+.restaurant-card-container {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  gap: 20px; /* Add space between cards */
+  margin-top: 20px; /* Add space at the top */
+  margin-bottom: 20px; /* Add space at the bottom */
+}
+
 /* Restaurant card styles */
 .restaurant-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    width: 300px; /* Fixed width for consistent card sizing */
-    text-align: left;
-    flex: 1 1 calc(33.333% - 40px); /* Three cards per row */
-    box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 300px; /* Fixed width for consistent card sizing */
+  text-align: left;
+  box-sizing: border-box;
+  margin: 10px; /* Optional: additional space around cards */
+}
+
+/* Hover effect */
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-name {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.restaurant-location,
+.restaurant-description {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Image inside each card */
+.restaurant-image {
+  width: 100%; /* Make image width 100% of the card */
+  max-height: 150px; /* Limit the height of the image */
+  object-fit: cover; /* Ensure the image covers the area while maintaining its aspect ratio */
+  border-radius: 10px 10px 0 0; /* Add rounded corners to the top */
+  margin-bottom: 15px; /* Add space between image and text */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .restaurant-card {
+    width: 48%; /* Two cards per row on medium screens */
   }
-  
-  /* Hover effect */
-  .restaurant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .restaurant-card {
+    width: 100%; /* One card per row on small screens */
   }
-  
-  .restaurant-name {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .restaurant-location,
-  .restaurant-description {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-  
-  /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
-    .restaurant-card {
-      flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .restaurant-card {
-      flex: 1 1 100%; /* One card per row on small screens */
-    }
-  }
-  
+}
