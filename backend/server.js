@@ -5,6 +5,8 @@ const cors = require('cors');
 
 const restaurantRoute = require('./routes/restaurantRoute');
 const menuitemRoute = require('./routes/menuitemRoute');
+const orderRoute = require('./routes/orderRoute');
+
 
 
 const app = express();
@@ -17,6 +19,7 @@ mongoose.connect('mongodb://localhost:27017/restaurantDB', { useNewUrlParser: tr
   .catch(err => console.error('MongoDB Error:', err));
 
 // Routes
+app.use('/orders', orderRoute); 
 app.use('/restaurants', restaurantRoute);
 app.use('/menu', menuitemRoute);
 

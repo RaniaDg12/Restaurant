@@ -23,6 +23,19 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Get a specific restaurant by its ID
+router.get('/:id', async (req, res) => {
+  try {
+    const restaurant = await Restaurant.findById(req.params.id);
+    if (!restaurant) {
+      return res.status(404).json({ error: 'Restaurant not found' });
+    }
+    res.json(restaurant); // Return the restaurant details including the name
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch restaurant', message: error.message });
+  }
+});
+
 // Add a new restaurant
 router.post('/', async (req, res) => {
   try {
