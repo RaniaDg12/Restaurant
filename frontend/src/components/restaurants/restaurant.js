@@ -19,7 +19,14 @@ function Restaurant({ restaurant }) {
       />
       
       {/* Restaurant details */}
-      <h2 className="restaurant-name">{restaurant.name}</h2>
+      <div className="restaurant-name-container">
+        <h2 className="restaurant-name">{restaurant.name}</h2>
+        <span
+          className={`restaurant-status ${restaurant.status === 'Open' ? 'open' : 'closed'}`}
+        >
+          {restaurant.status}
+        </span>
+      </div>
       <p className="restaurant-location"><strong>Location:</strong> {restaurant.location}</p>
       <p className="restaurant-description"><strong>Description:</strong> {restaurant.description}</p>
     </div>
