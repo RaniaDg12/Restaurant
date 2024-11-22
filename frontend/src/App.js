@@ -4,6 +4,7 @@ import Restaurant from './components/restaurants/restaurant';
 import Menu from './components/menus/menu';
 import Navbar from './components/navbar/navbar';
 import Order from './components/orders/order'; 
+import AboutUs from './components/about/about';
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -46,6 +47,9 @@ function App() {
 
           {/* Route for the order page */}
           <Route path="/orders" element={<Order />} />
+          
+          {/* Route for the about page */}
+          <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
       </div>
     </Router>
