@@ -68,7 +68,7 @@ function Order() {
 
   return (
     <div className="order-page">
-      <h1>Your Orders</h1>
+      <h1>My Orders</h1>
       {orders.length > 0 ? (
         <div className="orders-container">
           {orders.map((order, orderIndex) => (
