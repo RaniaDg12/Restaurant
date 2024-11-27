@@ -22,6 +22,22 @@ const createOrder = async (req, res) => {
   }
 };
 
+const addAllOrders = async (req, res) => {
+  const orders = req.body;
+
+  // Process all orders (e.g., save them to a database)
+  try {
+    // Example: Save each order in the database
+    orders.forEach(order => {
+      // Save logic here
+    });
+
+    res.status(200).send({ message: 'All orders confirmed!' });
+  } catch (error) {
+    res.status(500).send({ message: 'Failed to confirm orders', error });
+  }
+};
+
 // Get all orders
 const getOrders = async (req, res) => {
   try {
@@ -59,6 +75,7 @@ const deleteOrder = async (req, res) => {
 
 module.exports = {
   createOrder,
+  addAllOrders,
   getOrders,
   getOrdersByRestaurant,
   deleteOrder,

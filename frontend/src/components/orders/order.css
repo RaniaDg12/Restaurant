@@ -2,10 +2,49 @@
   padding: 20px;
 }
 
+.order-layout {
+  display: flex;
+  gap: 20px;
+}
 .orders-container {
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.summary-card {
+  flex: 1; /* Narrower column for summary */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+}
+
+.confirm-all-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-all-button:hover {
+  background-color: darkgreen;
 }
 
 .order-card {
