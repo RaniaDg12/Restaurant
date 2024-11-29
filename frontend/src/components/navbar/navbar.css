@@ -1,6 +1,6 @@
 /* Global styles for navbar */
 .navbar {
-    background: linear-gradient(to right, #ff5733, #ff6f61); /* Red gradient */
+    background: linear-gradient(to right, #ff5733, #ff6f61); 
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -41,6 +41,29 @@
     color: #f39c12;
 }
 
+/* Buttons for Signup and Login */
+.navbar-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+.navbar-button {
+    text-decoration: none;
+    background-color: #fbae32; 
+    color: white;
+    padding: 10px 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar-button:hover {
+    background-color: #d35400; /* Darker orange for hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Mobile styles */
 .navbar-mobile-icon {
     display: none;
     font-size: 24px;
@@ -54,6 +77,10 @@
 
     .navbar-mobile-icon {
         display: block;
+    }
+
+    .navbar-buttons {
+        display: none; /* Hide buttons on small screens */
     }
 }
 

@@ -4,7 +4,6 @@ import Restaurant from './components/restaurants/restaurant';
 import Menu from './components/menus/menu';
 import Navbar from './components/navbar/navbar';
 import Order from './components/orders/order'; 
-import AboutUs from './components/about/about';
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -25,9 +24,13 @@ function App() {
 
         {/* Routes for the different pages */}
         <Routes>
+          
+          {/* Route for the home page */}
+          <Route path="/"  />
+
           {/* Route for the restaurant list */}
           <Route
-            path="/"
+            path="/restaurants"
             element={
               <div className="restaurant-card-container">
                 {/* Applied the container class */}
@@ -48,8 +51,6 @@ function App() {
           {/* Route for the order page */}
           <Route path="/orders" element={<Order />} />
           
-          {/* Route for the about page */}
-          <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
       </div>
     </Router>

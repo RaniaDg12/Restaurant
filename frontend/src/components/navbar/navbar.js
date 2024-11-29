@@ -1,15 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css'; // Assuming you create this CSS file
+import './navbar.css'; 
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
-        <Link to="/" className="navbar-logo">
-          <span className="navbar-brand">RESTAURANT APP</span>
-        </Link>
+        <Link to="/" className="navbar-brand">RESTAURANT APP</Link>
 
         {/* Links */}
         <ul className="navbar-links">
@@ -17,12 +14,18 @@ function Navbar() {
             <Link to="/" className="navbar-link">Home</Link>
           </li>
           <li>
-            <Link to="/orders" className="navbar-link">My Order</Link>
+            <Link to="/restaurants" className="navbar-link">Restaurants</Link>
           </li>
           <li>
-            <Link to="/aboutus" className="navbar-link">About Us</Link>
+            <Link to="/orders" className="navbar-link">My Order</Link>
           </li>
         </ul>
+
+        {/* Buttons for Signup and Login */}
+        <div className="navbar-buttons">
+          <Link to="/signup" className="navbar-button">Signup</Link>
+          <Link to="/login" className="navbar-button">Login</Link>
+        </div>
 
         {/* Mobile Menu Icon */}
         <div className="navbar-mobile-icon">
