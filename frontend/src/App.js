@@ -4,6 +4,7 @@ import Restaurant from './components/restaurants/restaurant';
 import Menu from './components/menus/menu';
 import Navbar from './components/navbar/navbar';
 import Order from './components/orders/order'; 
+import Home from './components/home/home';
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -26,7 +27,7 @@ function App() {
         <Routes>
           
           {/* Route for the home page */}
-          <Route path="/"  />
+          <Route path="/" element={<Home />} />
 
           {/* Route for the restaurant list */}
           <Route

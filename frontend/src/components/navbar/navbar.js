@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-brand">RESTAURANT APP</Link>
+        <Link to="/" className="navbar-brand">RESTAURANT Hub</Link>
 
         {/* Links */}
         <ul className="navbar-links">
